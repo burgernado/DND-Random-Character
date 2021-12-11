@@ -4,7 +4,7 @@ subclasses = ["Cavalier", "Battle Master", "Champion", "Echo Knight", "Eldrich K
 backgrounds = ["Criminal", "Soldier", "Sailor"]
 
 fighterrandsubclass = random.choice(subclasses)
-fighterrandbackground = random.choice(subclasses)
+fighterrandbackground = random.choice(backgrounds)
 fighterskills = ["Athletics", "Perception"]
 if fighterrandsubclass == "Battle Master":
     print("https://arcaneeye.com/class-guides/battle-master-5e-guide/")
