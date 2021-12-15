@@ -53,6 +53,9 @@ for i in range(timestoloop):
     if chosenrace == "Aasimar":
         randclass = random.choice(aasimarclasses)
 
+    if chosenrace == "Aarakocra":
+        randclass = random.choice(aasimarclasses)
+
     if chosenrace == "Firbolg":
         randclass = random.choice(firbolgclasses)
 
