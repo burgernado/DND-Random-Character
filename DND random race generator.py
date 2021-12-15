@@ -2,19 +2,32 @@ import random
 charnum = 1
 classlist = ["Barbarian", "Cleric", "Druid", "Fighter", "Monk", "Paladin",
              "Sorcerer", "Wizard", "Warlock", "Ranger", "Bard", "Rogue"]
-barbarianracelist = ["Var Human", "Half-Orc", "Half-Elf", "Mountain Dwarf", "Dragonborn"]
-fighterracelist = ["Var Human", "Half-Orc", "Feral Tiefling", "Dragonborn", "Mountain Dwarf"]
-clericracelist = ["Hill Dwarf", "Var Human", "Half-Elf"]
-sorcererracelist = ["Tiefling", "Half-Elf", "Lightfoot Halfling", "Var Human"]
-monkracelist = ["Wood Elf", "Feral Tiefling", "Var Human", "Stout Halfling"]
-paladinracelist = ["Dragonborn", "Half-Elf", "Half-Orc",
-                   "Lightfoot Halfling", "Var Human", "Tiefling"]
-druidracelist = ["Wood Elf", "Var Human", "Ghostwise Halfling", "Half-Elf"]
-wizardracelist = ["High Elf", "Gnome", "Var Human", "Tiefling"]
-bardracelist = ["Half-Elf", "Lightfoot Halfling", "Variant Human", "Tiefling"]
-warlockracelist = ["Tiefling", "Lightfoot Halfling", "Half-Elf", "Var Human"]
-rangerracelist = ["Wood Elf", "Stout Halfling", "Var Human"]
-rogueracelist = ["High Elf", "Wood Elf", "Lightfoot Halfling", "Var Human", "Feral Tiefling"]
+barbarianracelist = ["Var Human", "Half-Orc", "Half-Elf",
+                     "Mountain Dwarf", "Dragonborn", "Tortle", "Warforged"]
+fighterracelist = ["Var Human", "Half-Orc", "Feral Tiefling", "Dragonborn",
+                   "Mountain Dwarf", "Aarakocra", "Aasimar", "Bugbear", "Kenku", "Kobold", "Leonin", "Owlin",
+                   "Tabaxi", "Changeling", "Warforged"]
+clericracelist = ["Hill Dwarf", "Var Human", "Half-Elf", "Aarakocra",
+                  "Aasimar", "Firbolg", "Kenku", "Tortle", "Warforged", "Owlin"]
+sorcererracelist = ["Tiefling", "Half-Elf", "Lightfoot Halfling", "Var Human", "Tabaxi", "Yuan-Ti Pureblood",
+                    "Triton", "Kalashtar", "Warforged", "Satyr", "Eladrin Elf", "Tabaxi", "Changeling"]
+monkracelist = ["Wood Elf", "Feral Tiefling", "Var Human", "Stout Halfling",
+                "Aarakocra", "Kenku", "Kobold", "Warforged", "Satyr", "Owlin", "Tabaxi"]
+paladinracelist = ["Dragonborn", "Half-Elf", "Half-Orc", "Lightfoot Halfling", "Var Human", "Tiefling",
+                   "Aasimar", "Kenku", "Tabaxi", "Tortle", "Triton", "Yuan-Ti Pureblood", "Warforged",
+                   "Minotaur", "Satyr", "Changeling"]
+druidracelist = ["Wood Elf", "Var Human", "Ghostwise Halfling", "Half-Elf",
+                 "Aarakocra", "Firbolg", "Kenku", "Owlin", "Tortle", "Warforged"]
+wizardracelist = ["High Elf", "Gnome", "Var Human",
+                  "Tiefling", "Yuan-Ti Pureblood", "Warforged", "Vedalken"]
+bardracelist = ["Half-Elf", "Lightfoot Halfling", "Variant Human", "Tiefling", "Eladrin Elf",
+                "Owlin", "Tabaxi", "Triton", "Yuan-Ti Pureblood", "Changeling", "Warforged", "Satyr"]
+warlockracelist = ["Tiefling", "Lightfoot Halfling", "Half-Elf", "Var Human", "Kobold",
+                   "Tabaxi", "Tortle", "Triton", "Yuan-Ti Pureblood", "Verdan", "Warforged", "Satyr"]
+rangerracelist = ["Wood Elf", "Stout Halfling", "Var Human", "Aarakocra",
+                  "Bugbear", "Kenku", "Kobold", "Owlin", "Tabaxi", "Tortle", "Warforged", "Centaur"]
+rogueracelist = ["High Elf", "Wood Elf", "Lightfoot Halfling", "Var Human", "Feral Tiefling", "Aarakocra",
+                 "Bugbear", "Kenku", "Kobold", "Owlin", "Tabaxi", "Changeling", "Warforged", "Satyr"]
 
 timestoloop = int(input("How many characters do you want to generate? "))
 fullconfirm = input("Do you want to create full characters? "
@@ -22,6 +35,10 @@ fullconfirm = input("Do you want to create full characters? "
 dndclass = input("What class do you want to be? ")
 
 for i in range(timestoloop):
+
+    print("")
+    print("Character", charnum)
+    charnum = charnum+1
 
     if dndclass == "Barbarian":
         barbarianrace = random.choice(barbarianracelist)
