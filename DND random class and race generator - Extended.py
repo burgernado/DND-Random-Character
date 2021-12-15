@@ -9,7 +9,7 @@ fighterracelist = ["Var Human", "Half-Orc", "Feral Tiefling", "Dragonborn",
                    "Tabaxi", "Changeling", "Warforged"]
 clericracelist = ["Hill Dwarf", "Var Human", "Half-Elf", "Aarakocra",
                   "Aasimar", "Firbolg", "Kenku", "Tortle", "Warforged", "Owlin"]
-sorcererracelist = ["Tiefling", "Half-Elf", "Lightfoot Halfling", "Var Human", "Tabaxi", "Yuan-Ti Pureblood",
+sorcererracelist = ["Tiefling", "Half-Elf", "Lightfoot Halfling", "Var Human", "Yuan-Ti Pureblood",
                     "Triton", "Kalashtar", "Warforged", "Satyr", "Eladrin Elf", "Tabaxi", "Changeling"]
 monkracelist = ["Wood Elf", "Feral Tiefling", "Var Human", "Stout Halfling",
                 "Aarakocra", "Kenku", "Kobold", "Warforged", "Satyr", "Owlin", "Tabaxi"]

@@ -1,6 +1,11 @@
 import random
 charnum = 1
-classlist = ["Barbarian", "Cleric", "Druid", "Fighter", "Monk", "Paladin"]
+classlist = ["Barbarian", "Cleric", "Druid", "Fighter", "Monk", "Paladin",
+             "Sorcerer", "Wizard", "Warlock", "Ranger", "Bard", "Rogue"]
+racelist = ["Var Human", "Dragonborn", "Half-Elf", "Half-Orc", "Tiefling", "Halfling", "Elf", "Dwarf",
+            "Gnome", "Aarakocra", "Warforged", "Aasimar", "Firbolg", "Kenku", "Tortle", "Tabaxi", "Yuan-Ti",
+            "Triton", "Satyr", "Changeling", "Kobold", "Owlin", "Bugbear", "Vedalken", "Leonin", "Gnome",
+            "Minotaur"]
 
 varhumanclasses = ["Barbarian", "Fighter", "Cleric", "Sorcerer", "Monk",
                    "Paladin", "Druid", "Wizard", "Bard", "Warlock", "Ranger", "Rogue"]
@@ -9,11 +14,29 @@ halfelfclasses = ["Barbarian", "Bard", "Warlock"]
 halforcclasses = ["Paladin", "Fighter", "Barbarian"]
 tieflingclasses = ["Fighter", "Sorcerer", "Monk", "Paladin", "Wizard", "Bard", "Warlock", "Rogue"]
 halflingclasses = ["Sorcerer", "Monk", "Paladin", "Druid", "Bard", "Warlock", "Ranger", "Rogue"]
-elfclasses = ["Monk", "Druid", "Wizard", "Ranger", "Rogue"]
+elfclasses = ["Monk", "Druid", "Wizard", "Ranger", "Rogue", "Sorcerer", "Bard"]
 dwarfclasses = ["Barbarian", "Fighter", "Cleric"]
 gnomeclasses = ["Wizard"]
+aarakocraclasses = ["Fighter", "Cleric", "Monk", "Druid", "Ranger", "Rogue"]
+warforgedclasses = ["Barbarian", "Cleric", "Druid", "Fighter", "Monk", "Paladin",
+                    "Sorcerer", "Wizard", "Warlock", "Ranger", "Bard", "Rogue"]
+aasimarclasses = ["Cleric", "Fighter", "Paladin"]
+firbolgclasses = ["Cleric", "Druid"]
+kenkuclasses = ["Fighter", "Cleric", "Monk", "Paladin", "Druid", "Ranger", "Rogue"]
+tortleclasses = ["Barbarian", "Cleric", "Paladin", "Druid", "Warlock", "Ranger"]
+tabaxiclasses = ["Fighter", "Sorcerer", "Monk", "Paladin", "Bard", "Warlock", "Ranger", "Rogue"]
+yuantipurebloodclasses = ["Sorcerer", "Paladin", "Wizard", "Bard", "Warlock"]
+tritonclasses = ["Sorcerer", "Paladin", "Bard", "Warlock"]
+satyrclasses = ["Sorcerer", "Monk", "Paladin", "Bard", "Warlock", "Rogue"]
+changelingclasses = ["Fighter", "Sorcerer", "Paladin", "Bard", "Rogue"]
+koboldclasses = ["Fighter", "Monk", "Warlock", "Ranger", "Rogue"]
+owlinclasses = ["Fighter", "Cleric", "Monk", "Druid", "Bard", "Ranger", "Rogue"]
+bugbearclasses = ["Fighter", "Ranger", "Rogue"]
+
 
 timestoloop = int(input("How many characters do you want to generate? "))
+print("Here are the races you can choose from:")
+print(', '.join(racelist))
 chosenrace = input("What race do you want to choose? ")
 fullconfirm = input("Do you want to create full characters? "
                     "(Gives a random background, random subclass and gives the best skills) ")
@@ -26,6 +49,42 @@ for i in range(timestoloop):
 
     if chosenrace == "Var Human":
         randclass = random.choice(varhumanclasses)
+
+    if chosenrace == "Aasimar":
+        randclass = random.choice(aasimarclasses)
+
+    if chosenrace == "Firbolg":
+        randclass = random.choice(firbolgclasses)
+
+    if chosenrace == "Kenku":
+        randclass = random.choice(kenkuclasses)
+
+    if chosenrace == "Tortle":
+        randclass = random.choice(tortleclasses)
+
+    if chosenrace == "Tabaxi":
+        randclass = random.choice(tabaxiclasses)
+
+    if chosenrace == "Yuan-Ti":
+        randclass = random.choice(yuantipurebloodclasses)
+
+    if chosenrace == "Triton":
+        randclass = random.choice(tritonclasses)
+
+    if chosenrace == "Satyr":
+        randclass = random.choice(satyrclasses)
+
+    if chosenrace == "Changeling":
+        randclass = random.choice(changelingclasses)
+
+    if chosenrace == "Kobold":
+        randclass = random.choice(koboldclasses)
+
+    if chosenrace == "Owlin":
+        randclass = random.choice(owlinclasses)
+
+    if chosenrace == "Bugbear":
+        randclass = random.choice(bugbearclasses)
 
     if chosenrace == "Dragonborn":
         randclass = random.choice(dragonbornclasses)
@@ -49,6 +108,15 @@ for i in range(timestoloop):
         randclass = random.choice(dwarfclasses)
 
     if chosenrace == "Gnome":
+        randclass = "Wizard"
+
+    if chosenrace == "Leonin":
+        randclass = "Fighter"
+
+    if chosenrace == "Minotaur":
+        randclass = "Paladin"
+
+    if chosenrace == "Vedalken":
         randclass = "Wizard"
 
     if randclass == "Barbarian":
