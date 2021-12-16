@@ -3,8 +3,8 @@ charnum = 1
 classlist = ["Barbarian", "Cleric", "Druid", "Fighter", "Monk", "Paladin",
              "Sorcerer", "Wizard", "Warlock", "Ranger", "Bard", "Rogue"]
 racelist = ["Var Human", "Dragonborn", "Half-Elf", "Half-Orc", "Tiefling", "Halfling", "Elf", "Dwarf",
-            "Aarakocra", "Warforged", "Aasimar", "Firbolg", "Kenku", "Tortle", "Tabaxi", "Yuan-Ti",
-            "Triton", "Satyr", "Changeling", "Kobold", "Owlin", "Bugbear"]
+            "Aarakocra", "Warforged", "Aasimar", "Firbolg", "Kenku", "Tortle", "Tabaxi", "Yuan-Ti", "Triton",
+            "Satyr", "Changeling", "Kobold", "Owlin", "Bugbear", "Gnome", "Leonin", "Minotaur", "Vedalken"]
 
 varhumanclasses = ["Barbarian", "Fighter", "Cleric", "Sorcerer", "Monk",
                    "Paladin", "Druid", "Wizard", "Bard", "Warlock", "Ranger", "Rogue"]
@@ -30,6 +30,10 @@ changelingclasses = ["Fighter", "Sorcerer", "Paladin", "Bard", "Rogue"]
 koboldclasses = ["Fighter", "Monk", "Warlock", "Ranger", "Rogue"]
 owlinclasses = ["Fighter", "Cleric", "Monk", "Druid", "Bard", "Ranger", "Rogue"]
 bugbearclasses = ["Fighter", "Ranger", "Rogue"]
+gnomeclasses = ["Wizard"]
+leoninclasses = ["Fighter"]
+minotaurclasses = ["Paladin"]
+vedalkenclasses = ["Wizard"]
 
 class_dict = {
     "Var Human": varhumanclasses,
@@ -54,6 +58,10 @@ class_dict = {
     "Kobold": koboldclasses,
     "Owlin": owlinclasses,
     "Bugbear": bugbearclasses,
+    "Gnome": gnomeclasses,
+    "Leonin": leoninclasses,
+    "Minotaur": minotaurclasses,
+    "Vedalken": vedalkenclasses
 }
 
 timestoloop = int(input("How many characters do you want to generate? "))
