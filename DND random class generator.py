@@ -4,7 +4,7 @@ classlist = ["Barbarian", "Cleric", "Druid", "Fighter", "Monk", "Paladin",
              "Sorcerer", "Wizard", "Warlock", "Ranger", "Bard", "Rogue"]
 racelist = ["Var Human", "Dragonborn", "Half-Elf", "Half-Orc", "Tiefling", "Halfling", "Elf", "Dwarf",
             "Aarakocra", "Warforged", "Aasimar", "Firbolg", "Kenku", "Tortle", "Tabaxi", "Yuan-Ti", "Triton",
-            "Satyr", "Changeling", "Kobold", "Owlin", "Bugbear", "Gnome", "Leonin", "Minotaur", "Vedalken"]
+            "Satyr", "Changeling", "Kobold", "Bugbear", "Gnome", "Leonin", "Minotaur", "Vedalken"]
 
 varhumanclasses = ["Barbarian", "Fighter", "Cleric", "Sorcerer", "Monk",
                    "Paladin", "Druid", "Wizard", "Bard", "Warlock", "Ranger", "Rogue"]
