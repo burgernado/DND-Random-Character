@@ -28,7 +28,6 @@ tritonclasses = ["Sorcerer", "Paladin", "Bard", "Warlock"]
 satyrclasses = ["Sorcerer", "Monk", "Paladin", "Bard", "Warlock", "Rogue"]
 changelingclasses = ["Fighter", "Sorcerer", "Paladin", "Bard", "Rogue"]
 koboldclasses = ["Fighter", "Monk", "Warlock", "Ranger", "Rogue"]
-owlinclasses = ["Fighter", "Cleric", "Monk", "Druid", "Bard", "Ranger", "Rogue"]
 bugbearclasses = ["Fighter", "Ranger", "Rogue"]
 gnomeclasses = ["Wizard"]
 leoninclasses = ["Fighter"]
@@ -56,7 +55,6 @@ class_dict = {
     "Satyr": satyrclasses,
     "Changeling": changelingclasses,
     "Kobold": koboldclasses,
-    "Owlin": owlinclasses,
     "Bugbear": bugbearclasses,
     "Gnome": gnomeclasses,
     "Leonin": leoninclasses,
@@ -70,6 +68,8 @@ print(', '.join(racelist))
 chosenrace = input("What race do you want to choose? ")
 fullconfirm = input("Do you want to create full characters? "
                     "(Gives a random background, random subclass and gives the best skills) ")
+rollforstats = input(
+    "Do you want to roll stats? (Requires D20 to be installed with pip install d20 in cmd) ")
 
 for i in range(timestoloop):
 
@@ -85,10 +85,13 @@ for i in range(timestoloop):
         print("https://arcaneeye.com/class-guides/5e-barbarian-guide/")
         print("https://rpgbot.net/dnd5/characters/classes/barbarian/")
         if fullconfirm == "yes":
-            from barbarianfullbuild import barbrandsubclass, barbrandbackground, barbskills
-            print(barbrandsubclass)
-            print(barbrandbackground)
-            print(barbskills)
+            from barbarianfullbuild import barbarianrandsubclass, barbarianrandbackground, barbarianskills
+            print(barbarianrandsubclass)
+            print(barbarianrandbackground)
+            print(barbarianskills)
+        if rollforstats == "yes":
+            from statroller.py import result
+            print(result)
 
     if randclass() == "Druid":
         print(chosenrace, "Druid")
@@ -99,6 +102,9 @@ for i in range(timestoloop):
             print(druidrandsubclass)
             print(druidrandbackground)
             print(druidskills)
+        if rollforstats == "yes":
+            from statroller.py import result
+            print(result)
 
     if randclass() == "Fighter":
         print(chosenrace, "Fighter")
@@ -109,6 +115,9 @@ for i in range(timestoloop):
             print(fighterrandsubclass)
             print(fighterrandbackground)
             print(fighterskills)
+        if rollforstats == "yes":
+            from statroller.py import result
+            print(result)
 
     if randclass() == "Cleric":
         print(chosenrace, "Cleric")
@@ -119,6 +128,9 @@ for i in range(timestoloop):
             print(clericrandsubclass)
             print(clericrandbackground)
             print(clericskills)
+        if rollforstats == "yes":
+            from statroller.py import result
+            print(result)
 
     if randclass() == "Monk":
         print(chosenrace, "Monk")
@@ -129,6 +141,9 @@ for i in range(timestoloop):
             print(monkrandsubclass)
             print(monkrandbackground)
             print(monkskills)
+        if rollforstats == "yes":
+            from statroller.py import result
+            print(result)
 
     if randclass() == "Paladin":
         print(chosenrace, "Paladin")
@@ -139,6 +154,9 @@ for i in range(timestoloop):
             print(paladinrandsubclass)
             print(paladinrandbackground)
             print(paladinskills)
+        if rollforstats == "yes":
+            from statroller.py import result
+            print(result)
 
     if randclass() == "Sorcerer":
         print(chosenrace, "Sorcerer")
@@ -149,6 +167,9 @@ for i in range(timestoloop):
             print(sorcererrandsubclass)
             print(sorcererrandbackground)
             print(sorcererskills)
+        if rollforstats == "yes":
+            from statroller.py import result
+            print(result)
 
     if randclass() == "Wizard":
         print(chosenrace, "Wizard")
@@ -159,6 +180,9 @@ for i in range(timestoloop):
             print(wizardrandsubclass)
             print(wizardrandbackground)
             print(wizardskills)
+        if rollforstats == "yes":
+            from statroller.py import result
+            print(result)
 
     if randclass() == "Ranger":
         print(chosenrace, "Ranger")
@@ -169,6 +193,9 @@ for i in range(timestoloop):
             print(rangerrandsubclass)
             print(rangerrandbackground)
             print(rangerskills)
+        if rollforstats == "yes":
+            from statroller.py import result
+            print(result)
 
     if randclass() == "Bard":
         print(chosenrace, "Bard")
@@ -179,6 +206,9 @@ for i in range(timestoloop):
             print(bardrandsubclass)
             print(bardrandbackground)
             print(bardskills)
+        if rollforstats == "yes":
+            from statroller.py import result
+            print(result)
 
     if randclass() == "Warlock":
         print(chosenrace, "Warlock")
@@ -189,6 +219,9 @@ for i in range(timestoloop):
             print(warlockrandsubclass)
             print(warlockrandbackground)
             print(warlockskills)
+        if rollforstats == "yes":
+            from statroller.py import result
+            print(result)
 
     if randclass() == "Rogue":
         print(chosenrace, "Rogue")
@@ -199,6 +232,9 @@ for i in range(timestoloop):
             print(roguerandsubclass)
             print(roguerandbackground)
             print(rogueskills)
+        if rollforstats == "yes":
+            from statroller.py import result
+            print(result)
 
 print("")
 input("press enter to end")
