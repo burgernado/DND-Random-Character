@@ -80,161 +80,17 @@ for i in range(timestoloop):
     def randclass():
         return random.choice(class_dict[chosenrace])
 
-    if randclass() == "Barbarian":
-        print(chosenrace, "Barbarian")
-        print("https://arcaneeye.com/class-guides/5e-barbarian-guide/")
-        print("https://rpgbot.net/dnd5/characters/classes/barbarian/")
-        if fullconfirm == "yes":
-            from barbarianfullbuild import barbarianrandsubclass, barbarianrandbackground, barbarianskills
-            print(barbarianrandsubclass)
-            print(barbarianrandbackground)
-            print(barbarianskills)
-        if rollforstats == "yes":
-            from statroller.py import result
-            print(result)
-
-    if randclass() == "Druid":
-        print(chosenrace, "Druid")
-        print("https://arcaneeye.com/class-guides/druid-5e-guide/")
-        print("https://rpgbot.net/dnd5/characters/classes/druid/")
-        if fullconfirm == "yes":
-            from druidfullbuild import druidrandsubclass, druidrandbackground, druidskills
-            print(druidrandsubclass)
-            print(druidrandbackground)
-            print(druidskills)
-        if rollforstats == "yes":
-            from statroller.py import result
-            print(result)
-
-    if randclass() == "Fighter":
-        print(chosenrace, "Fighter")
-        print("https://arcaneeye.com/all/dnd-5e-fighter-guide/")
-        print("https://rpgbot.net/dnd5/characters/classes/fighter/")
-        if fullconfirm == "yes":
-            from fighterfullbuild import fighterrandsubclass, fighterrandbackground, fighterskills
-            print(fighterrandsubclass)
-            print(fighterrandbackground)
-            print(fighterskills)
-        if rollforstats == "yes":
-            from statroller.py import result
-            print(result)
-
-    if randclass() == "Cleric":
-        print(chosenrace, "Cleric")
-        print("https://arcaneeye.com/class-guides/5e-cleric-guide/")
-        print("https://rpgbot.net/dnd5/characters/classes/cleric/")
-        if fullconfirm == "yes":
-            from clericfullbuild import clericrandsubclass, clericrandbackground, clericskills
-            print(clericrandsubclass)
-            print(clericrandbackground)
-            print(clericskills)
-        if rollforstats == "yes":
-            from statroller.py import result
-            print(result)
-
-    if randclass() == "Monk":
-        print(chosenrace, "Monk")
-        print("https://arcaneeye.com/class-guides/5e-monk-guide/")
-        print("https://rpgbot.net/dnd5/characters/classes/monk/")
-        if fullconfirm == "yes":
-            from monkfullbuild import monkrandsubclass, monkrandbackground, monkskills
-            print(monkrandsubclass)
-            print(monkrandbackground)
-            print(monkskills)
-        if rollforstats == "yes":
-            from statroller.py import result
-            print(result)
-
-    if randclass() == "Paladin":
-        print(chosenrace, "Paladin")
-        print("https://arcaneeye.com/class-guides/dnd-5e-paladin-guide/")
-        print("https://rpgbot.net/dnd5/characters/classes/paladin/")
-        if fullconfirm == "yes":
-            from paladinfullbuild import paladinrandsubclass, paladinrandbackground, paladinskills
-            print(paladinrandsubclass)
-            print(paladinrandbackground)
-            print(paladinskills)
-        if rollforstats == "yes":
-            from statroller.py import result
-            print(result)
-
-    if randclass() == "Sorcerer":
-        print(chosenrace, "Sorcerer")
-        print("https://arcaneeye.com/class-guides/sorcerer-guide-5e/")
-        print("https://rpgbot.net/dnd5/characters/classes/sorcerer/")
-        if fullconfirm == "yes":
-            from sorcererfullbuild import sorcererrandsubclass, sorcererrandbackground, sorcererskills
-            print(sorcererrandsubclass)
-            print(sorcererrandbackground)
-            print(sorcererskills)
-        if rollforstats == "yes":
-            from statroller.py import result
-            print(result)
-
-    if randclass() == "Wizard":
-        print(chosenrace, "Wizard")
-        print("https://arcaneeye.com/class-guides/dnd-5e-wizard-guide/")
-        print("https://rpgbot.net/dnd5/characters/classes/wizard/")
-        if fullconfirm == "yes":
-            from wizardfullbuild import wizardrandsubclass, wizardrandbackground, wizardskills
-            print(wizardrandsubclass)
-            print(wizardrandbackground)
-            print(wizardskills)
-        if rollforstats == "yes":
-            from statroller.py import result
-            print(result)
-
-    if randclass() == "Ranger":
-        print(chosenrace, "Ranger")
-        print("https://arcaneeye.com/class-guides/bard-guide/")
-        print("https://rpgbot.net/dnd5/characters/classes/ranger/")
-        if fullconfirm == "yes":
-            from rangerfullbuild import rangerrandsubclass, rangerrandbackground, rangerskills
-            print(rangerrandsubclass)
-            print(rangerrandbackground)
-            print(rangerskills)
-        if rollforstats == "yes":
-            from statroller.py import result
-            print(result)
-
-    if randclass() == "Bard":
-        print(chosenrace, "Bard")
-        print("https://arcaneeye.com/class-guides/bard-guide/")
-        print("https://rpgbot.net/dnd5/characters/classes/bard/")
-        if fullconfirm == "yes":
-            from bardfullbuild import bardrandsubclass, bardrandbackground, bardskills
-            print(bardrandsubclass)
-            print(bardrandbackground)
-            print(bardskills)
-        if rollforstats == "yes":
-            from statroller.py import result
-            print(result)
-
-    if randclass() == "Warlock":
-        print(chosenrace, "Warlock")
-        print("https://arcaneeye.com/all/dnd-5e-warlock-guide/")
-        print("https://rpgbot.net/dnd5/characters/classes/warlock/")
-        if fullconfirm == "yes":
-            from warlockfullbuild import warlockrandsubclass, warlockrandbackground, warlockskills
-            print(warlockrandsubclass)
-            print(warlockrandbackground)
-            print(warlockskills)
-        if rollforstats == "yes":
-            from statroller.py import result
-            print(result)
-
-    if randclass() == "Rogue":
-        print(chosenrace, "Rogue")
-        print("https://arcaneeye.com/class-guides/dnd-5e-rogue-guide/")
-        print("https://rpgbot.net/dnd5/characters/classes/rogue/")
-        if fullconfirm == "yes":
-            from roguefullbuild import roguerandsubclass, roguerandbackground, rogueskills
-            print(roguerandsubclass)
-            print(roguerandbackground)
-            print(rogueskills)
-        if rollforstats == "yes":
-            from statroller.py import result
-            print(result)
+    a = randclass()
+    print(chosenrace,a)
+    b = a.lower()
+    if fullconfirm == "yes":
+       exec(f"from {b}fullbuild import {b}randsubclass, {b}randbackground, {b}skills")
+       exec(f"print({b}randsubclass)")
+       exec(f"print({b}randbackground)")
+       exec(f"print({b}skills)")
+    if rollforstats == "yes":
+        from statroller.py import result
+        print(result)
 
 print("")
 input("press enter to end")
