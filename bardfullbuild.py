@@ -1,6 +1,6 @@
 import random
 
-subclasses = ["College of Eloquence", "College of Lore", ""]
+subclasses = ["College of Eloquence", "College of Lore"]
 backgrounds = ["Criminal", "Guild Artisan", "Sailor", "Spy", "Urchin"]
 
 bardrandsubclass = random.choice(subclasses)
