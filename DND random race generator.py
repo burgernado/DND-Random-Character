@@ -47,13 +47,13 @@ for i in range(timestoloop):
     exec(f"randrace = random.choice({b}racelist)")
     print(randrace, dndclass)
     if fullconfirm == "yes":
-       exec(f"from {b}fullbuild import {b}randsubclass, {b}randbackground, {b}skills")
-       exec(f"print({b}randsubclass)")
-       exec(f"print({b}randbackground)")
-       exec(f"print({b}skills)")
+        exec(f"from {b}fullbuild import {b}randsubclass, {b}randbackground, {b}skills")
+        exec(f"print({b}randsubclass)")
+        exec(f"print({b}randbackground)")
+        exec(f"print({b}skills)")
     if rollforstats == "yes":
-        from statroller.py import result
-        print(result)
+        from statroller import resultlist
+        print(resultlist)
 
 print("")
 input("press enter to end")
