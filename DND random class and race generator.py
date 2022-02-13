@@ -47,7 +47,7 @@ for i in range(timestoloop):
     a = randclass()
     b = a.lower()
     exec(f"randrace = random.choice({b}racelist)")
-    print(randclass, a)
+    print(randrace, a)
     if fullconfirm == "yes":
         exec(f"from {b}fullbuild import {b}randsubclass, {b}randbackground, {b}skills")
         exec(f"print({b}randsubclass)")
