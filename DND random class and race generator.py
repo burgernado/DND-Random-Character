@@ -20,7 +20,7 @@ druidracelist = ["Wood Elf", "Var Human", "Ghostwise Halfling", "Half-Elf",
                  "Aarakocra", "Firbolg", "Kenku", "Tortle", "Warforged"]
 wizardracelist = ["High Elf", "Gnome", "Var Human",
                   "Tiefling", "Yuan-Ti Pureblood", "Warforged", "Vedalken"]
-bardracelist = ["Half-Elf", "Lightfoot Halfling", "Variant Human", "Tiefling", "Eladrin Elf",
+bardracelist = ["Half-Elf", "Lightfoot Halfling", "Var Human", "Tiefling", "Eladrin Elf",
                 "Tabaxi", "Triton", "Yuan-Ti Pureblood", "Changeling", "Warforged", "Satyr"]
 warlockracelist = ["Tiefling", "Lightfoot Halfling", "Half-Elf", "Var Human", "Kobold",
                    "Tabaxi", "Tortle", "Triton", "Yuan-Ti Pureblood", "Verdan", "Warforged", "Satyr"]
