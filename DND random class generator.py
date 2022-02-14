@@ -1,4 +1,17 @@
 import random
+import d20
+
+
+class MyStringifier(d20.SimpleStringifier):
+    def _stringify(self, node):
+        if not node.kept:
+            return 'X'
+        return super()._stringify(node)
+
+    def _str_expression(self, node):
+        return f"{int(node.total)}"
+
+
 charnum = 1
 classlist = ["Barbarian", "Cleric", "Druid", "Fighter", "Monk", "Paladin",
              "Sorcerer", "Wizard", "Warlock", "Ranger", "Bard", "Rogue"]
@@ -73,6 +86,8 @@ rollforstats = input(
 
 for i in range(timestoloop):
 
+    resultlist = []
+
     print("")
     print("Character", charnum)
     charnum = charnum+1
@@ -89,7 +104,10 @@ for i in range(timestoloop):
         exec(f"print({b}randbackground)")
         exec(f"print({b}skills)")
     if rollforstats == "yes":
-        from statroller import resultlist
+        for i in range(6):
+            result = d20.roll("4d6kh3", stringifier=MyStringifier())
+            resultlist.append(str(result))
+
         print(resultlist)
 
 print("")
