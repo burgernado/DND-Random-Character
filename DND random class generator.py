@@ -1,6 +1,6 @@
 import random
 import d20
-
+charnum = 1
 
 class MyStringifier(d20.SimpleStringifier):
     def _stringify(self, node):
@@ -11,10 +11,10 @@ class MyStringifier(d20.SimpleStringifier):
     def _str_expression(self, node):
         return f"{int(node.total)}"
 
-
-charnum = 1
+#Lists Classes for convenience
 classlist = ["Barbarian", "Cleric", "Druid", "Fighter", "Monk", "Paladin",
              "Sorcerer", "Wizard", "Warlock", "Ranger", "Bard", "Rogue"]
+#lists races to print later
 racelist = ["Var Human", "Dragonborn", "Half-Elf", "Half-Orc", "Tiefling", "Halfling", "Elf", "Dwarf",
             "Aarakocra", "Warforged", "Aasimar", "Firbolg", "Kenku", "Tortle", "Tabaxi", "Yuan-Ti", "Triton",
             "Satyr", "Changeling", "Kobold", "Bugbear", "Gnome", "Leonin", "Minotaur", "Vedalken"]
@@ -47,6 +47,7 @@ leoninclasses = ["Fighter"]
 minotaurclasses = ["Paladin"]
 vedalkenclasses = ["Wizard"]
 
+#class dictionary to avoid having alot of if statements
 class_dict = {
     "Var Human": varhumanclasses,
     "Aasimar": aasimarclasses,
@@ -86,15 +87,18 @@ rollforstats = input(
 
 for i in range(timestoloop):
 
+    #result list to store dice roll results for later
     resultlist = []
 
     print("")
     print("Character", charnum)
     charnum = charnum+1
 
+    #randomly chooses class that correlates to the chosen race from the class dictionary from earlier
     def randclass():
         return random.choice(class_dict[chosenrace])
 
+    #code that removes the need for an if statement for every class
     a = randclass()
     print(chosenrace, a)
     b = a.lower()

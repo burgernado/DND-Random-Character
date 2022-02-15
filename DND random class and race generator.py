@@ -2,7 +2,10 @@ import random
 import d20
 charnum = 1
 
+#this is here to make visual studio not scream at me for not having randrace defined
+randrace = ""
 
+#stringifier to make roll result readable
 class MyStringifier(d20.SimpleStringifier):
     def _stringify(self, node):
         if not node.kept:
@@ -12,7 +15,7 @@ class MyStringifier(d20.SimpleStringifier):
     def _str_expression(self, node):
         return f"{int(node.total)}"
 
-
+#Lists Classes for convenience
 classlist = ["Barbarian", "Cleric", "Druid", "Fighter", "Monk", "Paladin",
              "Sorcerer", "Wizard", "Warlock", "Ranger", "Bard", "Rogue"]
 barbarianracelist = ["Var Human", "Half-Orc", "Half-Elf",
@@ -50,15 +53,18 @@ rollforstats = input(
 
 for i in range(timestoloop):
 
+    #result list to store dice roll results for later
     resultlist = []
 
     print("")
     print("Character", charnum)
     charnum = charnum+1
 
+    #randomly chooses class from classlist
     def randclass():
         return random.choice(classlist)
 
+    #code that removes the need for an if statement for every class
     a = randclass()
     b = a.lower()
     exec(f"randrace = random.choice({b}racelist)")
