@@ -2,6 +2,7 @@ import random
 import d20
 charnum = 1
 
+#stringifier to make roll result readable
 class MyStringifier(d20.SimpleStringifier):
     def _stringify(self, node):
         if not node.kept:
