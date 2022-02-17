@@ -71,8 +71,8 @@ for i in range(timestoloop):
     print(randrace, a)
     if fullconfirm == "yes":
         exec(f"from {b}fullbuild import {b}randsubclass, {b}randbackground, {b}skills")
-        exec(f"print({b}randsubclass)")
-        exec(f"print({b}randbackground)")
+        exec(f"print({b}randsubclass())")
+        exec(f"print({b}randbackground())")
         exec(f"print({b}skills)")
     if rollforstats == "yes":
         for i in range(6):

@@ -3,6 +3,8 @@ import random
 subclasses = ["Forge Domain", "Life Domain", "Light Domain", "Trickery Domain", "War Domain"]
 backgrounds = ["Acolyte", "Faction Agent", "Hermit"]
 
-clericrandsubclass = random.choice(subclasses)
-clericrandbackground = random.choice(backgrounds)
+def clericrandsubclass():
+    return random.choice(subclasses)
+def clericrandbackground():
+    return random.choice(backgrounds)
 clericskills = ["Insight", "Medicine"]

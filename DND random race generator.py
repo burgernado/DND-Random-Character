@@ -46,9 +46,11 @@ rogueracelist = ["High Elf", "Wood Elf", "Lightfoot Halfling", "Var Human", "Fer
                  "Bugbear", "Kenku", "Kobold", "Tabaxi", "Changeling", "Warforged", "Satyr"]
 
 timestoloop = int(input("How many characters do you want to generate? "))
+print("Here are the classes you can choose from:")
+print(', '.join(classlist))
+dndclass = input("What class do you want to be? ")
 fullconfirm = input("Do you want to create full characters? "
                     "(Gives a random background, random subclass and gives the best skills) ")
-dndclass = input("What class do you want to be? ")
 rollforstats = input(
     "Do you want to roll stats? (Requires D20 to be installed with pip install d20 in cmd) ")
 
@@ -68,8 +70,8 @@ for i in range(timestoloop):
     print(randrace, dndclass)
     if fullconfirm == "yes":
         exec(f"from {b}fullbuild import {b}randsubclass, {b}randbackground, {b}skills")
-        exec(f"print({b}randsubclass)")
-        exec(f"print({b}randbackground)")
+        exec(f"print({b}randsubclass())")
+        exec(f"print({b}randbackground())")
         exec(f"print({b}skills)")
     if rollforstats == "yes":
         for i in range(6):
