@@ -1,6 +1,7 @@
 import random
 import d20
 charnum = 1
+check = 0
 
 #stringifier to make roll result readable
 class MyStringifier(d20.SimpleStringifier):
@@ -77,15 +78,47 @@ class_dict = {
     "Vedalken": vedalkenclasses
 }
 
-timestoloop = int(input("How many characters do you want to generate? "))
-print("Here are the races you can choose from:")
-print(', '.join(racelist))
-chosenrace = input("What race do you want to choose? ")
-fullconfirm = input("Do you want to create full characters? "
-                    "(Gives a random background, random subclass and gives the best skills) ")
-rollforstats = input(
-    "Do you want to roll stats? (Requires D20 to be installed with pip install d20 in cmd) ")
+while check == 0:
+    timestoloop = input("How many characters do you want to generate? ")
+    isint = timestoloop.isdigit()
+    isint = str(isint)
+    if isint == "True":
+        check = 1
+    elif isint == "False":
+        print("Try again and make sure you entered a number")
 
+check = 0
+print("Here are the races you can choose from: ")
+print(', '.join(racelist))
+while check == 0:
+    chosenrace = input("What race do you want to choose? ")
+    if chosenrace not in racelist:
+        print("Try enter a valid race from the list")
+    elif chosenrace in racelist:
+        check = 1
+
+check = 0
+
+while check == 0:
+    fullconfirm = input("Do you want to create full characters? "
+                       "(Gives a random background, random subclass and gives the best skills) ")
+    if fullconfirm not in ['yes', 'no']:
+        print("This is a yes or no question")
+    elif fullconfirm in ['yes', 'no']:
+        check = 1
+
+check = 0
+
+while check == 0:
+    rollforstats = input(
+    "Do you want to roll stats? (Requires D20 to be installed with pip install d20 in cmd) ")
+    if rollforstats not in ['yes', 'no']:
+        print("This is a yes or no question")
+    elif rollforstats in ['yes', 'no']:
+        check = 1
+
+
+timestoloop = int(timestoloop)
 for i in range(timestoloop):
 
     #result list to store dice roll results for later

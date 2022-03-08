@@ -1,6 +1,7 @@
 import random
 import d20
 charnum = 1
+check = 0
 
 #this is here to make visual studio not scream at me for not having randrace defined
 randrace = ""
@@ -45,15 +46,47 @@ rangerracelist = ["Wood Elf", "Stout Halfling", "Var Human", "Aarakocra",
 rogueracelist = ["High Elf", "Wood Elf", "Lightfoot Halfling", "Var Human", "Feral Tiefling", "Aarakocra",
                  "Bugbear", "Kenku", "Kobold", "Tabaxi", "Changeling", "Warforged", "Satyr"]
 
-timestoloop = int(input("How many characters do you want to generate? "))
+while check == 0:
+    timestoloop = input("How many characters do you want to generate? ")
+    isint = timestoloop.isdigit()
+    isint = str(isint)
+    if isint == "True":
+        check = 1
+    elif isint == "False":
+        print("Try again and make sure you entered a number")
+
+check = 0
 print("Here are the classes you can choose from:")
 print(', '.join(classlist))
-dndclass = input("What class do you want to be? ")
-fullconfirm = input("Do you want to create full characters? "
-                    "(Gives a random background, random subclass and gives the best skills) ")
-rollforstats = input(
-    "Do you want to roll stats? (Requires D20 to be installed with pip install d20 in cmd) ")
 
+while check == 0:
+    dndclass = input("What class do you want to be? ")
+    if dndclass not in classlist:
+        print("Try enter a valid race from the list")
+    elif dndclass in classlist:
+        check = 1
+
+check = 0
+
+while check == 0:
+    fullconfirm = input("Do you want to create full characters? "
+                       "(Gives a random background, random subclass and gives the best skills) ")
+    if fullconfirm not in ['yes', 'no']:
+        print("This is a yes or no question")
+    elif fullconfirm in ['yes', 'no']:
+        check = 1
+
+check = 0
+
+while check == 0:
+    rollforstats = input(
+    "Do you want to roll stats? (Requires D20 to be installed with pip install d20 in cmd) ")
+    if rollforstats not in ['yes', 'no']:
+        print("This is a yes or no question")
+    elif rollforstats in ['yes', 'no']:
+        check = 1
+
+timestoloop = int(timestoloop)
 for i in range(timestoloop):
 
     #result list to store dice roll results for later
